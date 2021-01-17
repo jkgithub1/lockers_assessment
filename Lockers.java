@@ -19,10 +19,10 @@ public class Lockers {
 
 	public void showMenu() {
 
-		int option=0;
+		int option = 0;
 
 		System.out.println("***********************************************************");
-		
+
 		System.out.println("Select Your option");
 
 		System.out.println("1. Retrieving the file names in an ascending order");
@@ -30,19 +30,16 @@ public class Lockers {
 		System.out.println("2. File Manipulation");
 
 		System.out.println("3. Exit");
-		
+
 		System.out.println("***********************************************************");
-		
+
 		try {
 
 			option = scan.nextInt();
-		
-		}catch(Exception e) {
+
+		} catch (Exception e) {
 			System.out.println("Please enter numeric value");
 		}
-		
-		
-		
 
 		switch (option) {
 		case 1:
@@ -82,8 +79,8 @@ public class Lockers {
 
 	public void showSubMenu() {
 
-		int option=0;
-		
+		int option = 0;
+
 		System.out.println("***********************************************************");
 
 		System.out.println("Select Your option");
@@ -95,18 +92,16 @@ public class Lockers {
 		System.out.println("3. Search a from the application");
 
 		System.out.println("4. Main Menu");
-		
+
 		System.out.println("***********************************************************");
 
 		try {
 
 			option = scan.nextInt();
-		
-		}catch(Exception e) {
+
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
-		
 
 		switch (option) {
 		case 1:
@@ -192,18 +187,14 @@ public class Lockers {
 	}
 
 	public static void main(String[] arg) {
-		
+
 		Lockers obj = new Lockers();
-		
+
 		System.out.println("LockedMe.com");
 
-//		System.out.println("Enter your root directory path : ");
-//	 	obj.directory =  obj.scan.next();
-		
-	 	while(true) {
-	 		obj.showMenu();
-	 	}
-		
+		while (true) {
+			obj.showMenu();
+		}
 
 	}
 }
