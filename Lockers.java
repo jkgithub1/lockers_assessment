@@ -12,6 +12,8 @@ public class Lockers {
 	String directory = "/home/jeyakumar/list";
 
 	Scanner scan;
+	
+	boolean loopflag = true;
 
 	public Lockers() {
 		scan = new Scanner(System.in);
@@ -38,7 +40,11 @@ public class Lockers {
 			option = scan.nextInt();
 
 		} catch (Exception e) {
-			System.out.println("Please enter numeric value");
+			
+			System.out.println("Invalid Input");
+			
+			this.loopflag = false;
+			
 		}
 
 		switch (option) {
@@ -95,7 +101,18 @@ public class Lockers {
 
 		System.out.println("***********************************************************");
 
-		option = scan.nextInt();
+		try {
+
+			option = scan.nextInt();
+
+		} catch (Exception e) {
+			
+			System.out.println("Invalid Input");
+			
+			this.loopflag = false;
+			
+		}
+		
 
 		switch (option) {
 		case 1:
@@ -186,7 +203,7 @@ public class Lockers {
 
 		System.out.println("LockedMe.com");
 
-		while (true) {
+		while (obj.loopflag) {
 			obj.showMenu();
 		}
 
