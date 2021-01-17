@@ -95,13 +95,7 @@ public class Lockers {
 
 		System.out.println("***********************************************************");
 
-		try {
-
-			option = scan.nextInt();
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
+		option = scan.nextInt();
 
 		switch (option) {
 		case 1:
